@@ -1,12 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { UserComponent } from './pages/user-component/user-component';
+// Usamos el nombre exacto de la clase: UserComponent
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
+  imports: [UserComponent], // Nombre de clase corregido aquí
 })
 export class App {
-  protected readonly title = signal('ahd2');
+  title = signal('Mi Aplicación Angular');
 }

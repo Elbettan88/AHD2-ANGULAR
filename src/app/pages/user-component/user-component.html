@@ -1,0 +1,21 @@
+<h1>USUARIOS</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Revisa que esté escrito exactamente así -->
+    @for (usuario of usuarios; track usuario.id) {
+      <tr>
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.name }}</td>
+        <td>{{ usuario.email }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
