@@ -1,0 +1,9 @@
+<h2>Lista de Comentarios</h2>
+
+@for (comentario of listaComentarios(); track comentario.id) {
+  <div style="border-bottom: 1px solid #ccc; padding: 10px 0; margin-bottom: 10px;">
+    <h3>{{ comentario.name }}</h3>
+    <p><strong>Email:</strong> {{ comentario.email }}</p>
+    <p>{{ comentario.body }}</p>
+  </div>
+}

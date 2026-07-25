@@ -1,0 +1,8 @@
+<h2>Lista de Álbumes</h2>
+
+@for (album of listaAlbumes(); track album.id) {
+  <div style="border-bottom: 1px solid #ccc; padding: 10px 0; margin-bottom: 10px; font-family: 'Segoe UI', sans-serif;">
+    <h3>Álbum #{{ album.id }}</h3>
+    <p><strong>Título:</strong> {{ album.title }}</p>
+  </div>
+}

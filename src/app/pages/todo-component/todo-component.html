@@ -1,0 +1,9 @@
+<h2>Lista de Tareas</h2>
+
+@for (tarea of listaTareas(); track tarea.id) {
+  <div style="border-bottom: 1px solid #ccc; padding: 10px 0; margin-bottom: 10px;">
+    <h3>Tarea #{{ tarea.id }}</h3>
+    <p><strong>Título:</strong> {{ tarea.title }}</p>
+    <p><strong>Estado:</strong> {{ tarea.completed ? '✅ Completada' : '❌ Pendiente' }}</p>
+  </div>
+}

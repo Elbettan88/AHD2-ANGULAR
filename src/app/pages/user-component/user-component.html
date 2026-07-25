@@ -9,12 +9,16 @@
     </tr>
   </thead>
   <tbody>
-    <!-- Revisa que esté escrito exactamente así -->
-    @for (usuario of usuarios; track usuario.id) {
+    <!-- Corregido: cambiamos 'usuarios' por 'listaUsuarios()' -->
+    @for (usuario of listaUsuarios(); track usuario.id) {
       <tr>
         <td>{{ usuario.id }}</td>
         <td>{{ usuario.name }}</td>
         <td>{{ usuario.email }}</td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="3" style="text-align: center;">Cargando información de usuarios...</td>
       </tr>
     }
   </tbody>

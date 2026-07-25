@@ -1,15 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { UserComponent } from './pages/user-component/user-component';
-// Usamos el nombre exacto de la clase: UserComponent
-
-
+import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, RouterLink], // <-- Verifica que RouterLink esté aquí
   templateUrl: './app.html',
-  styleUrls: ['./app.css'],
-  imports: [UserComponent], // Nombre de clase corregido aquí
+  styleUrl: './app.css'
 })
-export class App {
-  title = signal('Mi Aplicación Angular');
+export class AppComponent {
+  title = 'ahd2';
 }
